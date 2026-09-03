@@ -1,0 +1,13 @@
+name = "student-discounts-api"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# ⚠️ ВАЖНО: После создания D1 базы данных замени database_id на реальный ID
+[[d1_databases]]
+binding = "DB"
+database_name = "student-discounts-db"
+database_id = "ТВОЙ-DATABASE-ID-БУДЕТ-ЗДЕСЬ"
+
+# Cron триггер - парсер запускается каждые 6 часов
+[triggers]
+crons = ["0 */6 * * *"]
